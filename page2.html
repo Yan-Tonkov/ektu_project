@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Курсы</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.prod.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">О курсе</a></li>
+                <li><a href="#program">Программа</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#advantages">Преимущества</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контейнер с Vue.js -->
+    <div id="app">
+        <!-- О курсе -->
+        <section id="about" class="section">
+            <h1>{{ aboutText }}</h1>
+            <button @click="changeAboutText">Изменить текст</button>
+            <button @click="toggleAboutText">Скрыть/Показать текст</button>
+            <button @click="mathOperations">Выполнить математическую операцию</button>
+        </section>
+
+        <!-- Программа курса -->
+        <section id="program" class="section">
+            <h2>Программа курса</h2>
+            <ul id="programList">
+                <li>Основы программирования</li>
+                <li>Веб-разработка</li>
+                <li>Мобильная разработка</li>
+                <li>Анализ данных</li>
+                <li>Искусственный интеллект и машинное обучение</li>
+            </ul>
+            <button @click="addNewTopic">Добавить тему</button>
+        </section>
+
+        <!-- Преимущества -->
+        <section id="advantages" class="section">
+            <h2>Преимущества курса</h2>
+            <ul>
+                <li>Практические задания и проекты</li>
+                <li>Обучение с опытными преподавателями</li>
+                <li>Гибкий график и доступные цены</li>
+                <li>Современные технологии и актуальные темы</li>
+            </ul>
+            <div class="advantage-imgs">
+                <img src="/images/orig.jpg" alt="Онлайн обучение" class="advantage-img">
+                <img src="/images/iStock-1179188076.jpg" alt="Менторство" class="advantage-img">
+            </div>
+        </section>
+
+        <div id="new__elem">
+            <p>{{ newElemText }}</p>
+            <button @click="createNewElement">Создать новый элемент</button>
+        </div>
+
+        <!-- Модальное окно -->
+         <div id="new__elem">
+            <button @click="showModal = true">Показать подсказку</button>
+         </div>
+
+        <!-- Модальное окно -->
+        <div class="modal-overlay" :class="{'show': showModal}">
+            <div class="modal-content">
+                <p>Наш менеджер свяжется с вами в ближайшее время!</p>
+                <button @click="showModal = false">Закрыть</button>
+            </div>
+        </div>
+
+
+        <div id="new__elem">
+             <!-- Поле ввода -->
+         <input v-model="userInput" placeholder="Введите текст">
+
+         <!-- Кнопка для изменения текста -->
+         <button @click="changeText">Изменить текст</button>
+
+         <!-- Отображаем введённый текст -->
+         <p>Вы ввели: {{ userInput }}</p>
+        </div>
+
+        <!-- Контакты -->
+        <section id="contact" class="section">
+            <h2>Контактная информация</h2>
+            <p>Телефон: +7 123 456 78 90</p>
+            <p>Email: info@itcourses.com</p>
+            <p>Адрес: г. Москва, ул. Программирования, 1</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 IT Курсы. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <div style="width: 200px; height: 200px; margin: 20px;">
+        Этот блок изменит фон.
+    </div>
+    <button id="change-btn">Изменить фон</button>
+
+    <div id="box"><h3>Образовательная онлайн-платформа курсов</h3></div>
+    <button id="move-btn">Переместить</button>
+
+
+
+    <h4>Онлайн-курсы по ИТ</h4>
+
+    <!-- Фильтрация по категории -->
+    <select id="categoryFilter">
+        <option value="all">Все категории</option>
+        <option value="Графический дизайн">Графический дизайн</option>
+        <option value="Frontend-разработка">Frontend-разработка</option>
+        <option value="Backend-разработка">Backend-разработка</option>
+        <option value="UX-UI-design">UX-UI-design</option>
+    </select>
+    <button id="filterTableButton">Фильтровать таблицу</button>
+
+    <!-- Таблица с курсами -->
+    <table id="courseTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">ID</th>
+                <th onclick="sortTable(1)">Название</th>
+                <th onclick="sortTable(2)">Категория</th>
+                <th onclick="sortTable(3)">Продолжительность</th>
+                <th onclick="sortTable(4)">Цена</th>
+                <th onclick="sortTable(5)">Уровень</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Список курсов -->
+    <ul id="courseList"></ul>
+    <button id="sortListButton">Сортировка по алфавиту А-Я</button>
+
+    
+
+    <script src = "js/jquery-3.7.1.min.js"></script>
+    <script src = "js/script2.js"></script>
+</body>     
+</html>

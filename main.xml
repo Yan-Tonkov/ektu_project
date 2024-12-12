@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+    <category name="Графический дизайн">
+        <course>
+            <id>1</id>
+            <name>Основы Adobe Photoshop</name>
+            <description>Курс для начинающих дизайнеров.</description>
+            <duration>4 недели</duration>
+            <level>Начальный</level>
+            <price>120.000</price>
+            <instructor>Артемий Лебедев</instructor>
+        </course>
+        <course>
+            <id>2</id>
+            <name>Продвинутый Adobe illustrator</name>
+            <description>Курс рассчитан на действующих дизайнеров.</description>
+            <duration>6 недель</duration>
+            <level>Средний</level>
+            <price>89.990</price>
+            <instructor>Артемий Лебедев</instructor>
+        </course>
+    </category>
+
+    <category name="UX-UI-design">
+        <course>
+            <id>3</id>
+            <name>Основы проектирования пользовательских веб-интерфейсов</name>
+            <description>Курс для новичков, изучающих основы работы с прототипированием сайтов.</description>
+            <duration>5 недель</duration>
+            <level>Начальный</level>
+            <price>220.000</price>
+            <instructor>Ярослав Ильин</instructor>
+        </course>
+        <course>
+            <id>4</id>
+            <name>Профессиональное изучение продуктового дизайна для web и app</name>
+            <description>Курс для подготовки к сертификации, охватывающий все необходимые темы.</description>
+            <duration>10 недель</duration>
+            <level>Средний</level>
+            <price>1.200.000</price>
+            <instructor>Ярослав Ильин</instructor>
+        </course>
+    </category>
+
+    <category name="Frontend-разработка">
+        <course>
+            <id>5</id>
+            <name>Основы веб-разработки (html, css, js)</name>
+            <description>Курс для начинающих по основам веб-дизайна.</description>
+            <duration>6 недель</duration>
+            <level>Начальный</level>
+            <price>59.990</price>
+            <instructor>Кирилл Першин</instructor>
+        </course>
+        <course>
+            <id>6</id>
+            <name>Знакомство с Angular, Bootstrap, Material Design</name>
+            <description>Курс для специалистов, которые хотя освоить мощный стек технологий.</description>
+            <duration>8 недель</duration>
+            <level>Продвинутый</level>
+            <price>89.990</price>
+            <instructor>Кирилл Першин</instructor>
+        </course>
+    </category>
+
+    <category name="Backend-разработка">
+        <course>
+            <id>7</id>
+            <name>Введение в СУБД MySQL</name>
+            <description>Курс для новичков по основам баз данных и серверной части.</description>
+            <duration>7 недель</duration>
+            <level>Начальный</level>
+            <price>150.000</price>
+            <instructor>Дмитрий Соловьев</instructor>
+            <link>https://example.com/ai-intro</link>
+        </course>
+        <course>
+            <id>8</id>
+            <name>Машинное обучение с Python</name>
+            <description>Продвинутый курс по машинному обучению с использованием Python и популярных библиотек.</description>
+            <duration>12 недель</duration>
+            <level>Продвинутый</level>
+            <price>4500</price>
+            <instructor>Ольга Белова</instructor>
+            <link>https://example.com/machine-learning-python</link>
+        </course>
+    </category>
+</courses>
